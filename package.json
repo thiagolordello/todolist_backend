@@ -30,7 +30,8 @@
     "nodemon": "^2.0.18",
     "sequelize": "^6.21.0",
     "sequelize-cli": "^6.4.1",
-    "sinon": "^14.0.0"
+    "sinon": "^14.0.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "eslint": "^8.18.0",
