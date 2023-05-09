@@ -2,6 +2,7 @@
   "development": {
     "username": "root",
     "password": "36vwcQu3H6Dre0ECfH5S",
+    "port":7937,
     "database": "railway",
     "host": "containers-us-west-41.railway.app",
     "dialect": "mysql"
