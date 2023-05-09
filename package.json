@@ -10,7 +10,8 @@
     "drop": "npx sequelize db:drop",
     "seed": "npx sequelize db:seed:all",
     "setdb": "npm run drop && npx sequelize db:create && npx sequelize db:migrate",
-    "debug": "nodemon index.js"
+    "debug": "nodemon index.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
