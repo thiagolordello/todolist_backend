@@ -1,6 +1,6 @@
 const app = require('./app');
 
-app.listen(3001, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log('Escutando na porta 3001');
 });
 
