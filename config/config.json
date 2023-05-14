@@ -1,9 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "trybe12345",
-    "database": "todolist_dev_bd",
-    "host": "127.0.2.1",
+    "password": "36vwcQu3H6Dre0ECfH5S",
+    "database": "railway",
+    "host": "containers-us-west-41.railway.app",
+    "port": "7937",
     "dialect": "mysql"
   },
   "test": {
