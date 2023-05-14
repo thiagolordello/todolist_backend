@@ -3,7 +3,7 @@
     "username": "root",
     "password": "36vwcQu3H6Dre0ECfH5S",
     "database": "railway",
-    "host": "containers-us-west-41.railway.app",
+    "host": "mysql://root:36vwcQu3H6Dre0ECfH5S@containers-us-west-41.railway.app:7937/railway",
     "port": "7937",
     "dialect": "mysql"
   },
@@ -11,7 +11,7 @@
     "username": "root",
     "password": "36vwcQu3H6Dre0ECfH5S",
     "database": "railway",
-    "host": "containers-us-west-41.railway.app",
+    "host": "mysql://root:36vwcQu3H6Dre0ECfH5S@containers-us-west-41.railway.app:7937/railway",
     "port": "7937",
     "dialect": "mysql"
   },
@@ -19,7 +19,7 @@
     "username": "root",
     "password": "36vwcQu3H6Dre0ECfH5S",
     "database": "railway",
-    "host": "containers-us-west-41.railway.app",
+    "host": "mysql://root:36vwcQu3H6Dre0ECfH5S@containers-us-west-41.railway.app:7937/railway",
     "port": "7937",
     "dialect": "mysql"
   }
