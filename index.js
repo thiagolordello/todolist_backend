@@ -1,5 +1,5 @@
-const app = require('./app');
 require('dotenv').config();
+const app = require('./app');
 const host = process.env.DB_HOST;
 const user = process.env.DB_USER;
 const password = process.env.DB_PASSWORD;
