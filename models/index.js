@@ -7,7 +7,7 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(`${__dirname}/../config/config.json`)[env];
 const db = {};
 
-const databaseUrl = process.env.MYSQLDATABASE;
+const databaseUrl = process.env.MYSQL_URL;
 const sequelize = new Sequelize(databaseUrl, config);
 
 fs
