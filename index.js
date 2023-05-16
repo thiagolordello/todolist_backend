@@ -5,7 +5,7 @@ const user = process.env.DB_USER;
 const password = process.env.DB_PASSWORD;
 const port = process.env.PORT || 3000;
 
-app.listen(port,"0.0.0.0", () => {
+app.listen(port, () => {
   console.log('Escutando na porta 3001');
 });
 
