@@ -10,7 +10,6 @@ const db = {};
 const databaseUrl = process.env.MYSQL_URL;
 const sequelize = new Sequelize(databaseUrl, {
   dialect: 'mysql',
-
 }); 
 
 fs
