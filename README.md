@@ -1,24 +1,33 @@
-# Título do projeto
+# To Do List (Backend)
 
-Um parágrafo da descrição do projeto vai aqui
+Sua lista de tarefas para usar a qualquer hora em todo lugar. Este sistema permite o usuario por meio de login e senha, controlar suas tarefas registradas no sistema criando,editando e removendo as tasks.
 
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
-
-```
-Dar exemplos
-```
-
+Banco de dados MySql instalado em docker ou local
+Nodejs versao 16.0.0
+Node Pack Manager 
+``
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+
+1. Clonar o repositorio. Abra o terminal e digite o comando: 'git clone https://github.com/thiagolordello/todolist_backend.git'
+
+2. Entre no diretorio criado e instale as dependencias do projeto: 'cd todolist_backend/'  'npm install'.
+
+3. Inicie a aplicacao com o comando de script: 'npm run debug'. Se a aplicacao tiver sido iniciada corretamente havera uma mensagem ao iniciar o servico 'starting `node index.js  Executando na porta 3001'
+
+4. Com o servico do MySql no status up, execute os scripts do sequelize para a criacao do banco: 'npm run setdb' e 'npm run seed'.
+
+5. Verifique no MySql se o banco 'todolist_dev_bd' foi criado e se as tabelas foram populadas pelo ultimo comando do passo anterior.
+
+Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
 
 Diga como essa etapa será:
 
