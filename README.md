@@ -17,12 +17,18 @@ Node Pack Manager
 ### 🔧 Instalação
 
 
-1. Clonar o repositorio. Abra o terminal e digite o comando: ```git clone https://github.com/thiagolordello/todolist_backend.git```
+1. Clonar o repositorio: Abra o terminal e digite o comando abaixo. 
 ```
 git clone https://github.com/thiagolordello/todolist_backend.git
 ```
 
-2. Entre no diretorio criado e instale as dependencias do projeto: 'cd todolist_backend/'  'npm install'.
+2. Entre no diretorio criado, e instale as dependencias do projeto: 'cd todolist_backend/'  'npm install'.
+```
+cd todolist_backend/
+```
+```
+npm install
+```
 
 3. Inicie a aplicacao com o comando de script: 'npm run debug'. Se a aplicacao tiver sido iniciada corretamente havera uma mensagem ao iniciar o servico 'starting `node index.js  Executando na porta 3001'
 
