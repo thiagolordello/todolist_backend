@@ -17,9 +17,7 @@ Node Pack Manager
 ### 🔧 Instalação
 
 
-1. Clonar o repositorio. Abra o terminal e digite o comando: ```
-git clone https://github.com/thiagolordello/todolist_backend.git
-``` 'git clone https://github.com/thiagolordello/todolist_backend.git'
+1. Clonar o repositorio. Abra o terminal e digite o comando: ```git clone https://github.com/thiagolordello/todolist_backend.git```
 
 2. Entre no diretorio criado e instale as dependencias do projeto: 'cd todolist_backend/'  'npm install'.
 
