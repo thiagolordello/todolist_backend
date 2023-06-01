@@ -17,12 +17,12 @@ Node Pack Manager
 ### 🔧 Instalação
 
 
-1. Clonar o repositorio: Abra o terminal e digite o comando abaixo. 
+1. Clone o repositorio: Abra o terminal e digite o comando abaixo. 
 ```
 git clone https://github.com/thiagolordello/todolist_backend.git
 ```
 
-2. Entre no diretorio criado, e instale as dependencias do projeto: 'cd todolist_backend/'  'npm install'.
+2. Entre no diretorio criado, e instale as dependencias do projeto:
 ```
 cd todolist_backend/
 ```
@@ -30,27 +30,24 @@ cd todolist_backend/
 npm install
 ```
 
-3. Inicie a aplicacao com o comando de script: 'npm run debug'. Se a aplicacao tiver sido iniciada corretamente havera uma mensagem ao iniciar o servico 'starting `node index.js  Executando na porta 3001'
+3. Inicie a aplicacao com o comando de script:
+```
+npm run debug
+```  
+   Se a aplicacao tiver sido iniciada corretamente, havera a seguinte mensagem ao iniciar o servico: 
+   'starting `node index.js  Executando na porta 3001'. Em caso de erro repita o processo.
 
-4. Com o servico do MySql no status up, execute os scripts do sequelize para a criacao do banco: 'npm run setdb' e 'npm run seed'.
+4. Com o servico do MySql em execucao, execute os scripts do sequelize para a criacao do banco:
+```
+npm run setdb
+```  
+```
+npm run seed
+``` 
 
 5. Verifique no MySql se o banco 'todolist_dev_bd' foi criado e se as tabelas foram populadas pelo ultimo comando do passo anterior.
 
 Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
-
-Diga como essa etapa será:
-
-```
-Dar exemplos
-```
-
-E repita:
-
-```
-Até finalizar
-```
-
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
 ## ⚙️ Executando os testes
 
