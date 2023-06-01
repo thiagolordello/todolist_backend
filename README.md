@@ -1,8 +1,8 @@
 # To Do List (Backend)
 
-Sua lista de tarefas para usar a qualquer hora em todo lugar. Este sistema permite o usuario por meio de login e senha, controlar suas tarefas registradas no sistema criando,editando e removendo as tasks.
+Este sistema permite o usuario por meio de login e senha, controlar suas tarefas registradas no sistema criando,editando e removendo as tasks.
 
-## 🚀 Começando
+## 🚀 Sua lista de tarefas para usar a qualquer hora em todo lugar.
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
