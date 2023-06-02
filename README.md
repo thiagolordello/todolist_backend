@@ -59,6 +59,8 @@ Exemplo :
 
 Para a chamada get all das tarefas ao inves de usar ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
 
+
+
 #### Registro de novo usuario POST /register:
 
 Na rota post '/register', fazemos a criacao de um usuario informando um json com as chaves name e password no corpo da requisicao contendo os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas.
