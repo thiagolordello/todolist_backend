@@ -52,7 +52,7 @@ npm run seed
 ## ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)  Vamos a pratica! Utilização das rotas:
 
 
-Registro de novo usuario POST /register:
+####Registro de novo usuario POST /register:
 
 Na rota post '/register' fazemos a criacao de usuario informando um json com as chaves name e password no corpo da requisicao contendo  os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas.
 
