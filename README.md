@@ -34,9 +34,6 @@ npm install
 ```
 npm run debug
 ```  
-
-   Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
-  
   Se a aplicacao tiver sido iniciada corretamente, havera a seguinte mensagem ao iniciar      o servico: 
    'starting `node index.js  Executando na porta 3001'. Em caso de erro repita o processo.
 
