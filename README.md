@@ -49,9 +49,10 @@ npm run seed
 
    Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
    
-### ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)  Vamos a pratica! Utilização das rotas:
+### ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)   Vamos a pratica! Utilização das rotas:
 
-Rota GET da lista de tarefas ```localhost:3001/tasks/"id_de_usuario_cadastrado_e_previamente_logado"``` 
+Rota GET da lista de tarefas: 
+```localhost:3001/tasks/"id_de_usuario_cadastrado_e_previamente_logado"``` 
 
 get '/:id' (Realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login)
 
