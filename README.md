@@ -34,6 +34,9 @@ npm install
 ```
 npm run debug
 ```  
+5. Verifique no MySql se o banco 'todolist_dev_bd' foi criado e se as tabelas foram populadas pelo ultimo comando do passo anterior.
+
+   Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
   
   Se a aplicacao tiver sido iniciada corretamente, havera a seguinte mensagem ao iniciar      o servico: 
    'starting `node index.js  Executando na porta 3001'. Em caso de erro repita o processo.
