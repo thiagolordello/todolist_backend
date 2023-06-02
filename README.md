@@ -53,15 +53,17 @@ npm run seed
 
 #### Atencao!
 
-Para proseguir com a utlizacao das rotas, voce podera optar por utilizar a aplicacao em nuvem (ambiente ja disponivel e nao precisa de instalacao) ou em ambiente local. Nos exemplos abaixo estao com o apontamento local. Caso sua escolha seja por fazer direto na API em nuvem basta substituir o inicio de cada chamada trocando o trecho ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
+Para proseguir com a utlizacao das rotas, voce podera optar por utilizar a aplicacao em nuvem (ambiente ja disponivel e nao precisa de instalacao) ou em ambiente local (precisara instalar as dependencias na raiz do projeto "/todolist_backend"). Nos exemplos de chamadas abaixo, estao com o apontamento local. Caso sua escolha seja por fazer direto na API em nuvem, basta substituir o inicio de cada chamada trocando o trecho ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
 
 Exemplo : 
 
-Para a chamada get all das tarefas ao inves de ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
+Para a chamada get all das tarefas ao inves de usar ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
 
 #### Registro de novo usuario POST /register:
 
 Na rota post '/register', fazemos a criacao de um usuario informando um json com as chaves name e password no corpo da requisicao contendo os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas.
+
+```localhost:3001/register``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/register```
 
 ![Captura de tela de 2023-06-02 15-26-06](https://github.com/thiagolordello/todolist_backend/assets/20212304/fb2e45a6-67f6-4498-94f5-43fd67f40651)
 
@@ -70,24 +72,26 @@ Na rota post '/register', fazemos a criacao de um usuario informando um json com
 
 A rota post '/login' e a porta de entrada para as demais. Com excecao da rota post/register a login devera ocorrer antes das demais pois ela retornara o token que e pre requisito para as demais requisicoes. Portanto assim que efetuar a requisicao de login, copie a chave token para que possar usar nas proximas requisicoes. Como o nome sugere, este endpoint efetua o login fornecendo name e password no momento da requisicao. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha.
 
+```localhost:3001/login"``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/login```
+
 ![Captura de tela de 2023-06-02 15-17-47](https://github.com/thiagolordello/todolist_backend/assets/20212304/bd64288b-de60-45c4-967b-6b4e79c39709)
 
 
-Listar todas as tarefas GET /tasks/iduser:
+#### Listar todas as tarefas GET /tasks/iduser:
 
 A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
 
-```localhost:3001/tasks/"id_de_usuario_cadastrado_e_previamente_logado"``` ou para usar direto no railway ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/"id_de_usuario_cadastrado_e_previamente_logado"```
-
+```localhost:3001/tasks/12``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/12```
 
 ![Captura de tela de 2023-06-02 11-18-18](https://github.com/thiagolordello/todolist_backend/assets/20212304/0a812f7b-8e48-459e-a02a-97c971cdf4d5)
 
-Lista uma tarefa pelo id da tarefa GET /tasks/onetask/id_da_tarefa:
 
-A rota GET que lista uma tarefa pelo id da tarefa:
-```localhost:3001/tasks/onetask/10"id_da_tarefa_do_usuario"``` ou para usar direto no railway ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/onetask/10"id_da_tarefa_do_usuario"```
+
+#### Lista uma tarefa pelo id da tarefa GET /tasks/onetask/id_da_tarefa:
 
 A rota GET '/onetask/:id', realiza a consulta de uma tarefa existente para o usuario autenticado por senha e token por meio do id da tarefa. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
+
+```localhost:3001/tasks/onetask/10``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/onetask/10```
 
 ![Captura de tela de 2023-06-02 14-17-31](https://github.com/thiagolordello/todolist_backend/assets/20212304/6d1c9753-9c68-41b1-8e84-26f74e442b89)
 
@@ -95,17 +99,23 @@ A rota GET '/onetask/:id', realiza a consulta de uma tarefa existente para o usu
 #### Salvando uma nova tarefa POST /tasks :
 A rota POST '/tasks',e rota para a criacao de uma tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task.
 
+```localhost:3001/tasks/``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/```
+
 ![Captura de tela de 2023-06-02 14-30-03](https://github.com/thiagolordello/todolist_backend/assets/20212304/7e32da1a-62f6-4327-b9f2-92ff8f6b3cdc)
 
 
 #### Editando uma tarefa pelo id da tarefa PUT /id_da_tarefa :
 A rota PUT '/:id' faz a alteracao de uma tarefa fornecendo o id da tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task. Deve ser informado no header da requisicao o campo Authorization com o valor do token gerado apos o login.
 
+```localhost:3001/tasks/10``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/10```
+
 ![Captura de tela de 2023-06-02 14-40-57](https://github.com/thiagolordello/todolist_backend/assets/20212304/386b65b0-b22f-4f19-ba2e-e037fbf168ae)
 
 
 #### Removendo uma tarefa pelo id da tarefa DELETE /id_da_tarefa :
 A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
+
+```localhost:3001/tasks/9``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/9``` 
 
 ![Captura de tela de 2023-06-02 14-52-17](https://github.com/thiagolordello/todolist_backend/assets/20212304/4be63a3b-a034-4475-99f9-3294c5542013)
 
