@@ -63,6 +63,7 @@ A rota GET que lista uma tarefa pelo id da tarefa:
 
 A rota '/onetask/:id', realiza a consulta de uma tarefa existente para o usuario autenticado por senha e token por meio do id da tarefa. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
 
+![Captura de tela de 2023-06-02 14-17-31](https://github.com/thiagolordello/todolist_backend/assets/20212304/6d1c9753-9c68-41b1-8e84-26f74e442b89)
 
 ## ⚙️ Executando os testes
 
