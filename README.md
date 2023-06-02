@@ -49,7 +49,7 @@ npm run seed
 
    Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
    
-### ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/f001ab85-a1b4-4450-8465-909ae3ba07df) Utilização das rotas   
+### ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763) Utilização das rotas   
 
 ## ⚙️ Executando os testes
 
