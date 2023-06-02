@@ -52,19 +52,30 @@ npm run seed
 ### ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)   Vamos a pratica! Utilização das rotas:
 
 
-Rota GET da lista de tarefas: 
+# Registro de novo usuario POST /register:
+Na rota post '/register' fazemos a criacao de usuario informando um json com as chaves name e password no corpo da requisicao contendo  os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas.
+
+![Captura de tela de 2023-06-02 15-26-06](https://github.com/thiagolordello/todolist_backend/assets/20212304/fb2e45a6-67f6-4498-94f5-43fd67f40651)
+
+
+# Login na aplicacao (pre-requisito para as demais rotas) POST /login:
+A rota post '/login' e a porta de entrada para as demais. Com excecao da rota post/register a login devera ocorrer antes das demais pois ela retornara o token que e pre requisito para as demais requisicoes. Portanto assim que efetuar a requisicao de login, copie a chave token para que possar usar nas proximas requisicoes. Como o nome sugere, este endpoint efetua o login fornecendo name e password no momento da requisicao. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha.
+
+![Captura de tela de 2023-06-02 15-17-47](https://github.com/thiagolordello/todolist_backend/assets/20212304/bd64288b-de60-45c4-967b-6b4e79c39709)
+
+
+# Listar todas as tarefas GET /tasks/iduser:
+A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
+
 ```localhost:3001/tasks/"id_de_usuario_cadastrado_e_previamente_logado"``` ou para usar direto no railway ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/"id_de_usuario_cadastrado_e_previamente_logado"```
 
 
 
-
-A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
-
 ![Captura de tela de 2023-06-02 11-18-18](https://github.com/thiagolordello/todolist_backend/assets/20212304/0a812f7b-8e48-459e-a02a-97c971cdf4d5)
+
 
 A rota GET que lista uma tarefa pelo id da tarefa:
 ```localhost:3001/tasks/onetask/10"id_da_tarefa_do_usuario"``` ou para usar direto no railway ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/onetask/10"id_da_tarefa_do_usuario"```
-
 
 A rota GET '/onetask/:id', realiza a consulta de uma tarefa existente para o usuario autenticado por senha e token por meio do id da tarefa. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
 
@@ -81,12 +92,16 @@ A rota PUT '/:id' faz a alteracao de uma tarefa fornecendo o id da tarefa. Deve 
 ![Captura de tela de 2023-06-02 14-40-57](https://github.com/thiagolordello/todolist_backend/assets/20212304/386b65b0-b22f-4f19-ba2e-e037fbf168ae)
 
 
-A rota DELETE '/:id' (Rota para deletar uma tarefa com base no id informado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
+A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
 
 ![Captura de tela de 2023-06-02 14-52-17](https://github.com/thiagolordello/todolist_backend/assets/20212304/4be63a3b-a034-4475-99f9-3294c5542013)
 
 
-Rota post '/login' (Rota para login fornecendo name e password. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha),
+A rota post '/login' e a porta de entrada para as demais. Com excecao da rota post/register a login devera ocorrer antes das demais pois ela retornara o token que e pre requisito para as demais requisicoes. Portanto assim que efetuar a requisicao de login, copie a chave token para que possar usar nas proximas requisicoes. Como o nome sugere, este endpoint efetua o login fornecendo name e password no momento da requisicao. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha.
+
+![Captura de tela de 2023-06-02 15-17-47](https://github.com/thiagolordello/todolist_backend/assets/20212304/bd64288b-de60-45c4-967b-6b4e79c39709)
+
+
 
 ## ⚙️ Executando os testes
 
