@@ -48,6 +48,8 @@ npm run seed
 5. Verifique no MySql se o banco 'todolist_dev_bd' foi criado e se as tabelas foram populadas pelo ultimo comando do passo anterior.
 
    Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
+   
+### 🔧 Utilização das rotas   
 
 ## ⚙️ Executando os testes
 
