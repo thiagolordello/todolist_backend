@@ -49,7 +49,7 @@ npm run seed
 
    Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
    
-### 🔧 Utilização das rotas   
+### computer Utilização das rotas   
 
 ## ⚙️ Executando os testes
 
