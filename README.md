@@ -54,7 +54,7 @@ npm run seed
 Rota GET da lista de tarefas: 
 ```localhost:3001/tasks/"id_de_usuario_cadastrado_e_previamente_logado"``` ou para usar direto no railway ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/"id_de_usuario_cadastrado_e_previamente_logado"```
 
-get '/:id' (Realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login)
+A rota get '/:id' (Realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login)
 
 ## ⚙️ Executando os testes
 
