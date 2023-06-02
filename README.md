@@ -51,6 +51,7 @@ npm run seed
    
 ### ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)   Vamos a pratica! Utilização das rotas:
 
+
 Rota GET da lista de tarefas: 
 ```localhost:3001/tasks/"id_de_usuario_cadastrado_e_previamente_logado"``` ou para usar direto no railway ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/"id_de_usuario_cadastrado_e_previamente_logado"```
 
@@ -64,6 +65,11 @@ A rota GET que lista uma tarefa pelo id da tarefa:
 A rota '/onetask/:id', realiza a consulta de uma tarefa existente para o usuario autenticado por senha e token por meio do id da tarefa. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
 
 ![Captura de tela de 2023-06-02 14-17-31](https://github.com/thiagolordello/todolist_backend/assets/20212304/6d1c9753-9c68-41b1-8e84-26f74e442b89)
+
+A Rota post '/tasks', Rota para a criacao de uma tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task.
+
+![Captura de tela de 2023-06-02 14-30-03](https://github.com/thiagolordello/todolist_backend/assets/20212304/7e32da1a-62f6-4327-b9f2-92ff8f6b3cdc)
+
 
 ## ⚙️ Executando os testes
 
