@@ -66,15 +66,27 @@ A rota GET que lista uma tarefa pelo id da tarefa:
 ```localhost:3001/tasks/onetask/10"id_da_tarefa_do_usuario"``` ou para usar direto no railway ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/onetask/10"id_da_tarefa_do_usuario"```
 
 
-A rota '/onetask/:id', realiza a consulta de uma tarefa existente para o usuario autenticado por senha e token por meio do id da tarefa. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
+A rota GET '/onetask/:id', realiza a consulta de uma tarefa existente para o usuario autenticado por senha e token por meio do id da tarefa. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
 
 ![Captura de tela de 2023-06-02 14-17-31](https://github.com/thiagolordello/todolist_backend/assets/20212304/6d1c9753-9c68-41b1-8e84-26f74e442b89)
 
 
-A Rota post '/tasks', Rota para a criacao de uma tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task.
+A rota POST '/tasks',e rota para a criacao de uma tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task.
 
 ![Captura de tela de 2023-06-02 14-30-03](https://github.com/thiagolordello/todolist_backend/assets/20212304/7e32da1a-62f6-4327-b9f2-92ff8f6b3cdc)
 
+
+A rota PUT '/:id' faz a alteracao de uma tarefa fornecendo o id da tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task. Deve ser informado no header da requisicao o campo Authorization com o valor do token gerado apos o login.
+
+![Captura de tela de 2023-06-02 14-40-57](https://github.com/thiagolordello/todolist_backend/assets/20212304/386b65b0-b22f-4f19-ba2e-e037fbf168ae)
+
+
+A rota DELETE '/:id' (Rota para deletar uma tarefa com base no id informado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login.
+
+![Captura de tela de 2023-06-02 14-52-17](https://github.com/thiagolordello/todolist_backend/assets/20212304/4be63a3b-a034-4475-99f9-3294c5542013)
+
+
+Rota post '/login' (Rota para login fornecendo name e password. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha),
 
 ## ⚙️ Executando os testes
 
