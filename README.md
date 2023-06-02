@@ -33,7 +33,8 @@ npm install
 3. Inicie a aplicacao com o comando de script:
 ```
 npm run debug
-```  Se a aplicacao tiver sido iniciada corretamente, havera a seguinte mensagem ao iniciar o servico: 
+```  
+   Se a aplicacao tiver sido iniciada corretamente, havera a seguinte mensagem ao iniciar o servico: 
    'starting `node index.js  Executando na porta 3001'. Em caso de erro repita o processo.
 
 4. Com o servico do MySql em execucao, execute os scripts do sequelize para a criacao do banco:
