@@ -51,10 +51,17 @@ npm run seed
    
 ## ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)  Vamos a pratica! Utilização das rotas:
 
+#### Atencao!
+
+Para proseguir com a utlizacao das rotas, voce podera optar por utilizar a aplicacao em nuvem (ambiente ja disponivel e nao precisa de instalacao) ou em ambiente local. Nos exemplos abaixo estao com o apontamento local. Caso sua escolha seja por fazer direto na API em nuvem basta substituir o inicio de cada chamada trocando o trecho ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
+
+Exemplo : 
+
+Para a chamada get all das tarefas ao inves de ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
 
 #### Registro de novo usuario POST /register:
 
-Na rota post '/register' fazemos a criacao de usuario informando um json com as chaves name e password no corpo da requisicao contendo  os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas.
+Na rota post '/register', fazemos a criacao de um usuario informando um json com as chaves name e password no corpo da requisicao contendo os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas.
 
 ![Captura de tela de 2023-06-02 15-26-06](https://github.com/thiagolordello/todolist_backend/assets/20212304/fb2e45a6-67f6-4498-94f5-43fd67f40651)
 
