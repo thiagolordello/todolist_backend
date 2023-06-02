@@ -56,6 +56,8 @@ Rota GET da lista de tarefas:
 
 A rota get '/:id' (Realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login)
 
+![Captura de tela de 2023-06-02 11-18-18](https://github.com/thiagolordello/todolist_backend/assets/20212304/0a812f7b-8e48-459e-a02a-97c971cdf4d5)
+
 ## ⚙️ Executando os testes
 
 Explicar como executar os testes automatizados para este sistema.
