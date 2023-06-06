@@ -120,8 +120,7 @@ A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado
 ```localhost:3001/tasks/9``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/9``` 
 
 
-## 
-![data_base_black](https://github.com/thiagolordello/todolist_backend/assets/20212304/998e410a-1717-424a-b9e1-f48594a10069) Arquitetura do Banco de Dados 
+## ![data_base_black](https://github.com/thiagolordello/todolist_backend/assets/20212304/998e410a-1717-424a-b9e1-f48594a10069) Arquitetura do Banco de Dados 
 
 
 ## ⚙️ Executando os testes
