@@ -122,6 +122,8 @@ A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado
 ![Captura de tela de 2023-06-02 14-52-17](https://github.com/thiagolordello/todolist_backend/assets/20212304/4be63a3b-a034-4475-99f9-3294c5542013)
 
 
+## ![database](https://github.com/thiagolordello/todolist_backend/assets/20212304/49cce9fe-b6e2-4614-a66c-6c70e5860f62) Arquitetura do Banco de Dados 
+
 
 ## ⚙️ Executando os testes
 
