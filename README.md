@@ -122,8 +122,8 @@ A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado
 
 ## ![banco2](https://github.com/thiagolordello/todolist_backend/assets/20212304/2c3a6985-5eb4-412e-8af7-4269888b4f84) Arquitetura do Banco de Dados 
 
-Para a modelagem desse projeto, foi idealizado duas tabelas onde estao armazenados os dados. A entidade users guarda as informacoes de cadastro dos usuarios como name e password.   
-Foi utilizado o ORM Sequelize para modelar os banco de dados utilizando a tecnologia MySql. Para esta aplicacao foi modelado as tabelas users e tasks_user . Na tabela 'users' temos as colunas: 'id','name', e 'password'. A coluna id e a chave esteageira. Na tabela tasks_user que se refere as tarefas do usuario temos as colunas: 'id' que e o identificador unico de registro de usuario e tambem e chave primaria,'id_user' e uma chave estrangeira que referencia a coluna 'id' da tabela 'users','descriptiom' que contem a descricao das tarefas,'status' que guarda o status da tarefa, created_at que guarda a hora de criacao de cada tarefa.
+Para a estrutura desse projeto, foram idealizadas duas entidades relacionais onde estao dispostas as informacoes do sistema . Na entidade users armazemanos as informacoes de cadastro dos usuarios como name e password. Na entidade tasks_user, temos as informacoes diretamente ligadas as tarefas como a descricao, o status e a data de criacao (createdAt), alem do id_user que referencia a que usuario a tarefa pertence.   
+Para a construcão da API utlizamos a tecnologia ORM Sequelize na orquestração do banco de dados MySql
 
 ![image](https://github.com/thiagolordello/todolist_backend/assets/20212304/aebf89eb-f2b6-47b3-9800-2268db43452c)
 
