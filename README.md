@@ -129,9 +129,51 @@ Para a construcão da API utlizamos a tecnologia ORM Sequelize na orquestração
 
 ## ⚙️ Executando os testes
 
-Para a execucao dos testes sera necessario estar com aplicacao iniciada. Caso nao esteja execute o comando de script .
+Os testes foram desenvolvidos com a biblioteca chai e chai-http. Nesta biblioteca fazemos o acesso direto aos endpoints, simulando uma real requisicao a API. Todos os testes estao baseados nos dados inseridos na execucao do seed que popula o banco com uma carga inicial de dados. Portanto e fundamental executar a completa instalacao do projeto incluindo a execucao dos scripts detalhados no topico de instalacao. Caso nao seja executada a instalacao por completo incluindo os scripts, os testes falharao por nao haver os dados que sao usados para comparacao nos testes.
 
-### 🔩 Analise os testes de ponta a ponta
+Para a execucao dos testes sera necessario estar com aplicacao iniciada e obviamente ter sido executada a instalacao do projeto no topico acima de instalacao. Caso nao esteja iniciada, execute o seguinte comando de script.
+```
+npm run debug
+```
+Com a aplicacao rodando execute o comando para a execucao dos testes.
+```
+npm run test
+```
+
+### 🔩 Analise de cada teste
+
+Todos os arquivos de teste estao no diretorio 'tests' localizado na raiz do projeto. Estao dividos em quatro arquivos com o final '.test.js'. 
+
+No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. Os casos de teste sao os seguintes:
+
+'Retorna o status 200,quando o login for bem sucedido!'
+'Retorna o status 404,quando o login nao for bem sucedido!'
+'Quando o nome nao for informado, retorna uma mensagem e o status 404'
+'Quando a senha nao for informada, retorna uma mensagem e o status 404'
+'Quando o usuario informado nao for encontrado, retorna uma mensagem e o status 404'
+'Quando o usuario e senha nao for informado, retorna uma mensagem e o status 400'
+
+
+No arquivo ```tasks.getAll.test.js"```, estao os testes referentes a rota GET /tasks/id_user. Os casos de teste sao os seguintes:
+
+'Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno das tasks do usuario!'
+'Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!'
+'Retorna o status 401 e mensagem, quando o token for ausente no header!'
+
+No arquivo ```tasks.getOneTask.test.js"```, estao os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste sao os seguintes:
+
+'Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno da task requisitada!'
+'Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!'
+'Retorna o status 401 e mensagem, quando o token for ausente no header!'
+
+No arquivo ```userRegister.test.js"```, estao os testes referentes a rota POST /register que registra novos usuarios. Os casos de teste sao os seguintes:
+
+'Retorna o status 201,quando a criacao for bem sucedida!'
+'Quando somente a senha for informada, retorna uma mensagem de erro e o status 400'
+'Quando somente o nome for informado, retorna uma mensagem de erro e o status 400'
+'Quando o usuario e a senha foram informados sem dados dentro (""), retorna uma mensagem e o status 400'
+'Quando o usuario e a senha nao foram informados no json, retorna uma mensagem e o status 500'
+
 
 Explique que eles verificam esses testes e porquê.
 
