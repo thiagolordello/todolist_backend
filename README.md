@@ -129,7 +129,7 @@ Para a construcão da API utlizamos a tecnologia ORM Sequelize na orquestração
 
 ## ⚙️ Executando os testes
 
-Explicar como executar os testes automatizados para este sistema.
+Para a execucao dos testes sera necessario estar com aplicacao iniciada. Caso nao esteja execute o comando de script .
 
 ### 🔩 Analise os testes de ponta a ponta
 
