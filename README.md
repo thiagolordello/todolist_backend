@@ -142,7 +142,7 @@ npm run test
 
 ## 🔩 Analise de cada teste
 
-Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do projeto. Estao dividos em quatro arquivos com nomenclatura final '.test.js'. 
+Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do projeto. Estao dividos em quatro arquivos com nomenclatura final '.test.js'. Os arquivos sao: login.test, tasks.getAll.test.js e tasks.getOneTask.test.js . 
 
 ### No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. Os casos de teste sao os seguintes:
 
