@@ -147,23 +147,33 @@ Todos os arquivos de teste estao no diretorio 'tests' localizado na raiz do proj
 No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. Os casos de teste sao os seguintes:
 
 
-```Retorna o status 200,quando o login for bem sucedido!```
+```Retorna o status 200,quando o login for bem sucedido!``` :
 
    Faz uma chamada post para a rota /login enviando name e password para efetuar o login. Se a name e password estiverem registrados no banco a API retorna um status 200 com o body contendo os campos: name, token e id do usuario que sera usado na requisicao get all das tasks.
 
 ```Retorna o status 404,quando o login nao for bem sucedido!```
 
+  Faz uma chamada post para a rota /login enviando name e password que nao existem no banco para efetuar o login. 
+  
+
 ```Quando o nome nao for informado, retorna uma mensagem e o status 404```
+  
+  Faz uma chamada post para a rota /login enviando name vazio e password "" para efetuar o login.
 
 ```Quando a senha nao for informada, retorna uma mensagem e o status 404```
 
+  Faz uma chamada post para a rota /login enviando somente name e campo password ausente para efetuar o login.  
+
 ```Quando o usuario informado nao for encontrado, retorna uma mensagem e o status 404```
+  
+  Faz uma chamada post para a rota /login enviando name e password com uma senha errada para efetuar o login.
 
 ```Quando o usuario e senha nao for informado, retorna uma mensagem e o status 400```
+  
+  Faz uma chamada post para a rota /login enviando name e password vazios "" para efetuar o login.
 
-
-
-No arquivo ```tasks.getAll.test.js"```, estao os testes referentes a rota GET /tasks/id_user. Os casos de teste sao os seguintes:
+  
+  No arquivo ```tasks.getAll.test.js"```, estao os testes referentes a rota GET /tasks/id_user. Os casos de teste sao os seguintes:
 
 ```Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno das tasks do usuario!```
 ```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
