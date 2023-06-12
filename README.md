@@ -146,12 +146,19 @@ Todos os arquivos de teste estao no diretorio 'tests' localizado na raiz do proj
 
 No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. Os casos de teste sao os seguintes:
 
+
 'Retorna o status 200,quando o login for bem sucedido!'
+
 'Retorna o status 404,quando o login nao for bem sucedido!'
+
 'Quando o nome nao for informado, retorna uma mensagem e o status 404'
+
 'Quando a senha nao for informada, retorna uma mensagem e o status 404'
+
 'Quando o usuario informado nao for encontrado, retorna uma mensagem e o status 404'
+
 'Quando o usuario e senha nao for informado, retorna uma mensagem e o status 400'
+
 
 
 No arquivo ```tasks.getAll.test.js"```, estao os testes referentes a rota GET /tasks/id_user. Os casos de teste sao os seguintes:
