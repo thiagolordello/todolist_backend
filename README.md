@@ -147,6 +147,7 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. Os casos de teste sao os seguintes:
 
 
+
 ```Retorna o status 200,quando o login for bem sucedido!``` :
 
    Faz uma chamada post para a rota /login enviando name e password para efetuar o login. Se a name e password estiverem registrados no banco a API retorna um status 200 com o body contendo os campos: name, token e id do usuario que sera usado na requisicao get all das tasks.
@@ -159,18 +160,23 @@ No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. 
 ```Quando o nome nao for informado, retorna uma mensagem e o status 404```
   
   Faz uma chamada post para a rota /login enviando name vazio e password "" para efetuar o login.
+  
 
 ```Quando a senha nao for informada, retorna uma mensagem e o status 404```
 
   Faz uma chamada post para a rota /login enviando somente name e campo password ausente para efetuar o login.  
+  
 
 ```Quando o usuario informado nao for encontrado, retorna uma mensagem e o status 404```
   
   Faz uma chamada post para a rota /login enviando name e password com uma senha errada para efetuar o login.
+  
 
 ```Quando o usuario e senha nao for informado, retorna uma mensagem e o status 400```
   
   Faz uma chamada post para a rota /login enviando name e password vazios "" para efetuar o login.
+  
+  
 
   
   No arquivo ```tasks.getAll.test.js"```, estao os testes referentes a rota GET /tasks/id_user. Os casos de teste sao os seguintes:
