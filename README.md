@@ -239,11 +239,9 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
    
    
 
-Explique que eles verificam esses testes e porquê.
+Os testes foram desenvolvidos pensando na mais real situacao possivel das chamadas a API. Ao optar por nao usar STUB na aplicacao, estamos fazendo chamadas diretas a API atraves da biblioteca CHAI-HTTP. Para estes casos de teste, foram utilizados os dados inseridos inicialmente na aplicacao por meio dos seeders que populam o banco. Para que nao comprometa a integridade do ambiente de testes, nao faca alteracoes no usuario joao pois nele estao baseados os casos de teste. Caso haja qualquer alteracao dos dados inseridos nesse usuario, ocorrerao erros de execucao.
 
-```
-Dar exemplos
-```
+
 
 ### ⌨️ E testes de estilo de codificação
 
