@@ -147,7 +147,7 @@ Todos os arquivos de teste estao no diretorio 'tests' localizado na raiz do proj
 No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. Os casos de teste sao os seguintes:
 
 
-´´´etorna o status 200,quando o login for bem sucedido!´´´
+```Retorna o status 200,quando o login for bem sucedido!```
 
 '''Retorna o status 404,quando o login nao for bem sucedido!'''
 
