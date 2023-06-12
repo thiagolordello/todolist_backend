@@ -242,51 +242,41 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 Os testes foram desenvolvidos pensando na mais real situacao possivel das chamadas a API. Ao optar por nao usar STUB na aplicacao, estamos fazendo chamadas diretas a API atraves da biblioteca CHAI-HTTP. Para estes casos de teste, foram utilizados os dados inseridos inicialmente na aplicacao por meio dos seeders que populam o banco. Para que nao comprometa a integridade do ambiente de testes, nao faca alteracoes no usuario joao pois nele estao baseados os casos de teste. Caso haja qualquer alteracao dos dados inseridos nesse usuario, ocorrerao erros de execucao.
 
 
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Implantação
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+Aqui estao as tecnologias que foram usadas para contruir o sistema:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+* [Nodejs] - O framework web usado
+* [Sequelize] - ORM para geracao de banco de dados relacional Mysql
+* [Chai] - Biblioteca utilizada para a geracao dos testes
+* [Chai-Http] - Biblioteca usada para a chamada em tempo real das requisicoes web a API.
+* [body-parser] - Middleware usado em node para analisar as requisicoes http
+* [cors] - Utilizado para obter maior seguranca no trafego http
+* [dotenv] - Utilizado para ocultar as variaveis ambiente presentes no arquivo .env
+* [express] - Framework usado para auxiliar o trafego das rotas.
+* [frisby] - Bibliote js usada para escrever os testes da aplicacao.
+* [jsonwebtoken] - Token utilizado na segunraca de login e nas demais rotas da aplicacao.
+* [md5] - Criptografia aplicada na encriptacao de dados para salvar no banco.
+* [moment] - Biblioteca usada para trabalhar com datas e horarios nos testes.
+* [mysql2] - Biblioteca que permite a comumicacao com o banco mysql da aplicacao.
+* [nodemon] - Utilizado para o ambiente de desenvolvimento evitando o restart da aplicacao a cada vez que alterado o codigo.
+* [sequelize-cli] - Interface de linha de comando para o uso do sequelize.  
 
-## 🖇️ Colaborando
 
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
+* **Desenvolvedor** - *Trabalho Inicial* - [thiagolordello]([https://github.com/linkParaPerfil](https://github.com/thiagolordello))
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
 
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+* **Colaboradores** - Alexsandro Xavier, Thiago Vieira e Logy.
 
 ## 📄 Licença
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+Este projeto tem fins apenas para estudo e demonstracao como portifolio pessoal. Esta vetado o uso para fins comerciais.
 
 ## 🎁 Expressões de gratidão
 
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
+* Aqui eu gostaria de agradecer a todos que me ajudam e me ajudaram nesta construcao inportante pra minha carreira;
+* Gostaria de agradecer primeiro a Deus por toda ajuda que tive e segundo a minha familia que tanto me apoia nessa jornada do desenvolvimento. 🫂;
+* Agradecimento tambem aos colegas de turma Alexsandro Xavier, Thiago Vieira e Logy. Sem ajuda de voces eu nao teria concluido. Meu sincero agradecimento a todos que me ajudaram a chegar onde cheguei ate hoje.
