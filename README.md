@@ -183,25 +183,35 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 
 ```Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno das tasks do usuario!```
 
+  Faz a requisicao get para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado. 
 
 ```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
-
+  
+  Faz a requisicao get enviando um token invalido para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
-
+  Faz a requisicao get nao enviando token para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
+  
+  
 
   ### No arquivo ```tasks.getOneTask.test.js"```, estao os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste sao os seguintes:
 
 ```Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno da task requisitada!```
 
+  Faz a requisicao get passando o id da tarefa no header e o token gerado no login. 
+  
 
 ```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
 
+  Faz a requisicao get passando o id da tarefa no header e um token desconhecido.
+    
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
-
+  Faz a requisicao get passando o id da tarefa no header com o token ausente. 
+  
+  
 
   ### No arquivo ```userRegister.test.js"```, estao os testes referentes a rota POST /register que registra novos usuarios. Os casos de teste sao os seguintes:
 
