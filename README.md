@@ -187,11 +187,11 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 
 ```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
   
-  Faz a requisicao get enviando um token invalido para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
+  Faz a requisicao get para a rota /tasks/id_user enviando um token invalido para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
-  Faz a requisicao get nao enviando token para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
+  Faz a requisicao get para a rota /tasks/id_user nao enviando token para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
   
   
 
@@ -199,17 +199,17 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 
 ```Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno da task requisitada!```
 
-  Faz a requisicao get passando o id da tarefa no header e o token gerado no login. 
+  Faz a requisicao get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login. 
   
 
 ```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
 
-  Faz a requisicao get passando o id da tarefa no header e um token desconhecido.
+  Faz a requisicao get para a rota /tasks/onetask/idTask passando o id da tarefa no header e um token desconhecido.
     
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
-  Faz a requisicao get passando o id da tarefa no header com o token ausente. 
+  Faz a requisicao get para a rota /tasks/onetask/idTask passando o id da tarefa no header com o token ausente. 
   
   
 
@@ -217,18 +217,25 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 
 ```Retorna o status 201,quando a criacao for bem sucedida!```
 
+   Faz a requisicao post com name e password para a rota /register.
 
 ```Quando somente a senha for informada, retorna uma mensagem de erro e o status 400```
 
+   Faz a requisicao post com name vazio  e password para a rota /register.
 
 ```Quando somente o nome for informado, retorna uma mensagem de erro e o status 400```
 
+   Faz a requisicao post com password vazio  e nome para a rota /register.
 
 ```Quando o usuario e a senha foram informados sem dados dentro (""), retorna uma mensagem e o status 400```
 
+   Faz a requisicao post com name e password para a rota /register vazios.
 
 ```Quando o usuario e a senha nao foram informados no json, retorna uma mensagem e o status 500```
-
+   
+   Faz a requisicao post sem as chaves name e password para a rota /register.
+   
+   
 
 Explique que eles verificam esses testes e porquê.
 
