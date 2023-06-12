@@ -148,6 +148,7 @@ No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. 
 
 
 ```Retorna o status 200,quando o login for bem sucedido!```
+  Faz uma chamada post para a rota /login enviando name e password para efetuar o login. Se a name e password estiverem registrados no banco a API retorna um status 200 com o body contendo os campos: name, token e id do usuario que sera usado na requisicao get all das tasks.
 
 ```Retorna o status 404,quando o login nao for bem sucedido!```
 
