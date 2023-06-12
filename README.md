@@ -212,6 +212,8 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
   Faz a requisicao get para a rota /tasks/onetask/idTask passando o id da tarefa no header com o token ausente. 
   
   
+  
+  
 
   ### No arquivo ```userRegister.test.js"```, estao os testes referentes a rota POST /register que registra novos usuarios. Os casos de teste sao os seguintes:
 
