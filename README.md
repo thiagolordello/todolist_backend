@@ -140,7 +140,7 @@ Com a aplicacao rodando execute o comando para a execucao dos testes.
 npm run test
 ```
 
-### 🔩 Analise de cada teste
+## 🔩 Analise de cada teste
 
 Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do projeto. Estao dividos em quatro arquivos com nomenclatura final '.test.js'. 
 
