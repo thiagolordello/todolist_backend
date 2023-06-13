@@ -1,28 +1,28 @@
 # To Do List (Backend)
 
-Este sistema permite o usuario por meio de login e senha, controlar suas tarefas registradas no sistema criando,editando e removendo as tasks.
+Este sistema permite o usuário por meio de login e senha, controlar suas tarefas registradas criando,editando e removendo as suas tasks.
 
-## 🚀 Sua lista de tarefas para usar a qualquer hora em todo lugar.
+## 🚀 Sua lista de tarefas para usar a qualquer hora em qualquer lugar.
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação no seu computador para fins de desenvolvimento e teste.
 
 
 
 ### 📋 Pré-requisitos
 
 Banco de dados MySql instalado em docker ou local
-Nodejs versao 16.0.0
-Node Pack Manager 
+Nodejs versão 16.0.0
+Node Package Manager 
 ``
 ### 🔧 Instalação
 
 
-1. Clone o repositorio: Abra o terminal e digite o comando abaixo. 
+1. Clone o repositório: Abra o terminal e digite o comando abaixo. 
 ```
 git clone https://github.com/thiagolordello/todolist_backend.git
 ```
 
-2. Entre no diretorio criado, e instale as dependencias do projeto:
+2. Entre no diretório criado, e instale as dependências do projeto:
 ```
 cd todolist_backend/
 ```
@@ -30,14 +30,14 @@ cd todolist_backend/
 npm install
 ```
 
-3. Inicie a aplicacao com o comando de script:
+3. Inicie a aplicação com o comando de script:
 ```
 npm run debug
 ```  
-  Se a aplicacao tiver sido iniciada corretamente, havera a seguinte mensagem ao iniciar      o servico: 
+  Se a aplicação tiver sido iniciada corretamente, haverá a seguinte mensagem ao iniciar      o serviço: 
    'starting `node index.js  Executando na porta 3001'. Em caso de erro repita o processo.
 
-4. Com o servico do MySql em execucao, execute os scripts do sequelize para a criacao do banco:
+4. Com o serviço do MySql em execução, execute os scripts do sequelize para a criação do banco:
 ```
 npm run setdb
 ```  
@@ -45,23 +45,25 @@ npm run setdb
 npm run seed
 ``` 
 
-5. Verifique no MySql se o banco 'todolist_dev_bd' foi criado e se as tabelas foram populadas pelo ultimo comando do passo anterior.
+5. Verifique no MySql se o banco 'todolist_dev_bd' foi criado e se as tabelas foram populadas pelo último comando do passo anterior.
 
-   Se estiver tudo ok, esta pronto para uso, caso contrario repita os passos para a correta instalacao da aplicacao.
+   Se estiver tudo ok, está pronto para uso, caso contrário repita os passos para a correta instalação da aplicação.
    
 ## ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)  Vamos a pratica! Utilização das rotas:
 
 #### Atencao!
 
-Para proseguir com a utlizacao das rotas, voce podera optar por utilizar a aplicacao em nuvem (ambiente ja disponivel e nao precisa de instalacao) ou em ambiente local (precisara instalar as dependencias na raiz do projeto "/todolist_backend"). Nos exemplos de chamadas abaixo, estao com o apontamento local. Caso sua escolha seja por fazer direto na API em nuvem, basta substituir o inicio de cada chamada trocando o trecho ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
+Para prosseguir com a utilização das rotas, você poderá optar por utilizar a aplicação em nuvem (ambiente já disponível e não precisa de instalação) ou em ambiente local (precisará instalar as dependências na raiz do projeto "/todolist_backend"). Nos exemplos de chamadas abaixo, elas estão com o apontamento local 'localhost'. Caso sua escolha seja fazer direto na API em nuvem, basta substituir o início de cada chamada, trocando o trecho  ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
 
 Exemplo : 
 
-Para a chamada get all das tarefas ao inves de usar ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
+Para a chamada que faz o get all das tarefas ao inves de usar ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
 
 
 
-#### Registro de novo usuario POST /register:
+#### Vamos ao que interessa !
+
+#### Registro de novo usuário POST /register:
 
 Na rota post '/register', fazemos a criacao de um usuario informando um json com as chaves name e password no corpo da requisicao contendo os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas. Se a requisicao for bem sucedida a api retornara um ```status code 201```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
 
@@ -72,7 +74,7 @@ Na rota post '/register', fazemos a criacao de um usuario informando um json com
 
 #### Login na aplicacao (pre-requisito para as demais rotas) POST /login:
 
-A rota post '/login' e a porta de entrada para as demais. Com excecao da rota post/register a login devera ocorrer antes das demais pois ela retornara o token que e pre requisito para as demais requisicoes. Portanto assim que efetuar a requisicao de login, copie a chave token para que possar usar nas proximas requisicoes. Como o nome sugere, este endpoint efetua o login fornecendo name e password no momento da requisicao. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+Na rota POST '/register', fazemos a criação de um usuário informando um JSON com as chaves name e password no corpo da requisição contendo os valores de nome de usuário e senha. Todas as rotas e o token gerado no login contam com middlewares de erro para o caso de chamadas indevidas. Se a requisição for bem-sucedida, a API retornará o token que e pre requisito para as demais requisicoes. Portanto assim que efetuar a requisicao de login, copie a chave token para que possa usar nas proximas requisicoes. Como o nome sugere, este endpoint efetua o login fornecendo name e password no momento da requisicao. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
 
 ```localhost:3001/login"``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/login```
 
@@ -81,7 +83,7 @@ A rota post '/login' e a porta de entrada para as demais. Com excecao da rota po
 
 #### Listar todas as tarefas GET /tasks/iduser:
 
-A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado por senha e token por meio do id de usuario logado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado com senha e token por meio do id de usuario logado. No momento da chamada, deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/12``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/12```
 
@@ -107,7 +109,7 @@ A rota POST '/tasks',e rota para a criacao de uma tarefa. Deve ser fornecido no 
 
 
 #### Editando uma tarefa pelo id da tarefa PUT /id_da_tarefa :
-A rota PUT '/:id' faz a alteracao de uma tarefa fornecendo o id da tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task. Deve ser informado no header da requisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 204```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota PUT '/:id' faz a alteracao de uma tarefa fornecendo o id da tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser editada e o status da task. Deve ser informado no header da requisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 204```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/10``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/10```
 
@@ -129,7 +131,7 @@ Para a construcão da API utlizamos a tecnologia ORM Sequelize na orquestração
 
 ## ⚙️ Executando os testes
 
-Os testes foram desenvolvidos com a biblioteca chai e chai-http. Nesta biblioteca fazemos o acesso direto aos endpoints, simulando uma real requisicao a API. Todos os testes estao baseados nos dados inseridos na execucao do seed que popula o banco com uma carga inicial de dados. Portanto e fundamental executar a completa instalacao do projeto incluindo a execucao dos scripts detalhados no topico de instalacao. Caso nao seja executada a instalacao por completo incluindo os scripts, os testes falharao por nao haver os dados que sao usados para comparacao nos testes.
+Os testes foram desenvolvidos com a biblioteca chai e chai-http. Nesta biblioteca fazemos o acesso direto aos endpoints, simulando uma real requisicao a API. Todos os testes estao baseados nos dados inseridos na execucao do seed que quando executado, popula o banco com uma carga inicial de dados que sera usados nos testes. Portanto e fundamental executar a completa instalacao do projeto incluindo a execucao dos scripts detalhados no topico de instalacao. Caso nao seja executada a instalacao por completo incluindo os scripts, os testes falharao por nao haver os dados que sao usados para comparacao nos testes.
 
 Para a execucao dos testes sera necessario estar com aplicacao iniciada e obviamente ter sido executada a instalacao do projeto no topico acima de instalacao. Caso nao esteja iniciada, execute o seguinte comando de script.
 ```
@@ -150,7 +152,7 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 
 ```Retorna o status 200,quando o login for bem sucedido!``` :
 
-   Faz uma chamada post para a rota /login enviando name e password para efetuar o login. Se a name e password estiverem registrados no banco a API retorna um status 200 com o body contendo os campos: name, token e id do usuario que sera usado na requisicao get all das tasks.
+   Faz uma chamada post para a rota /login enviando name e password para efetuar o login. Se o valor informado de name e password estiverem registrados no banco a API retorna um status 200 com o body contendo os campos: name, token e id do usuario que sera usado na requisicao get all das tasks.
 
 ```Retorna o status 404,quando o login nao for bem sucedido!```
 
@@ -187,7 +189,7 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 
 ```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
   
-  Faz a requisicao get para a rota /tasks/id_user enviando um token invalido para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
+  Faz a requisicao get para a rota /tasks/id_user enviando um token invalido no header para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
@@ -215,7 +217,7 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
   
   
 
-  ### No arquivo ```userRegister.test.js"```, estao os testes referentes a rota POST /register que registra novos usuarios. Os casos de teste sao os seguintes:
+  ### No arquivo ```userRegister.test.js"```, estao os testes referentes a rota POST /register que registra um novo usuario. Os casos de teste sao os seguintes:
 
 ```Retorna o status 201,quando a criacao for bem sucedida!```
 
@@ -231,7 +233,7 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
 
 ```Quando o usuario e a senha foram informados sem dados dentro (""), retorna uma mensagem e o status 400```
 
-   Faz a requisicao post com name e password para a rota /register vazios.
+   Faz a requisicao post com name e password vazios para a rota /register.
 
 ```Quando o usuario e a senha nao foram informados no json, retorna uma mensagem e o status 500```
    
@@ -239,22 +241,22 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
    
    
 
-Os testes foram desenvolvidos pensando na mais real situacao possivel das chamadas a API. Ao optar por nao usar STUB na aplicacao, estamos fazendo chamadas diretas a API atraves da biblioteca CHAI-HTTP. Para estes casos de teste, foram utilizados os dados inseridos inicialmente na aplicacao por meio dos seeders que populam o banco. Para que nao comprometa a integridade do ambiente de testes, nao faca alteracoes no usuario joao pois nele estao baseados os casos de teste. Caso haja qualquer alteracao dos dados inseridos nesse usuario, ocorrerao erros de execucao.
+ Todos os testes foram desenvolvidos pensando na mais real situacao possivel das chamadas a API. Ao optar por nao usar STUB na aplicacao, estamos fazendo chamadas diretas a API atraves da biblioteca CHAI-HTTP. Para estes casos de teste, foram utilizados os dados inseridos inicialmente na aplicacao por meio dos seeders que populam o banco. Para que nao comprometer a integridade do ambiente de testes, nao faca alteracoes no usuario joao pois nele estao baseados os casos de teste. Caso haja qualquer alteracao dos dados inseridos nesse usuario, ocorrerao erros de execucao.
 
 
 ## 🛠️ Construído com
 
 Aqui estao as tecnologias que foram usadas para contruir o sistema:
 
-* [Nodejs] - O framework web usado
+* [Nodejs] - O framework web usado.
 * [Sequelize] - ORM para geracao de banco de dados relacional Mysql
-* [Chai] - Biblioteca utilizada para a geracao dos testes
+* [Chai] - Biblioteca utilizada para a geracao dos testes.
 * [Chai-Http] - Biblioteca usada para a chamada em tempo real das requisicoes web a API.
-* [body-parser] - Middleware usado em node para analisar as requisicoes http
-* [cors] - Utilizado para obter maior seguranca no trafego http
-* [dotenv] - Utilizado para ocultar as variaveis ambiente presentes no arquivo .env
+* [body-parser] - Middleware usado em node para analisar as requisicoes http.
+* [cors] - Utilizado para obter maior seguranca no trafego http.
+* [dotenv] - Utilizado para ocultar as variaveis ambiente presentes no arquivo .env .
 * [express] - Framework usado para auxiliar o trafego das rotas.
-* [frisby] - Bibliote js usada para escrever os testes da aplicacao.
+* [frisby] - Biblioteca js usada para escrever os testes da aplicacao.
 * [jsonwebtoken] - Token utilizado na segunraca de login e nas demais rotas da aplicacao.
 * [md5] - Criptografia aplicada na encriptacao de dados para salvar no banco.
 * [moment] - Biblioteca usada para trabalhar com datas e horarios nos testes.
@@ -278,5 +280,5 @@ Este projeto tem fins apenas para estudo e demonstracao como portifolio pessoal.
 ## 🎁 Expressões de gratidão
 
 * Aqui eu gostaria de agradecer a todos que me ajudam e me ajudaram nesta construcao inportante pra minha carreira;
-* Gostaria de agradecer primeiro a Deus por toda ajuda que tive e segundo a minha familia que tanto me apoia nessa jornada do desenvolvimento. 🫂;
-* Agradecimento tambem aos colegas de turma Alexsandro Xavier, Thiago Vieira e Logy. Sem ajuda de voces eu nao teria concluido. Meu sincero agradecimento a todos que me ajudaram a chegar onde cheguei ate hoje.
+* Gostaria de agradecer primeiro a Deus por toda ajuda que tive e segundo lugar a minha familia que tanto me apoia nessa jornada do desenvolvimento. 🫂;
+* Agradecimento tambem aos colegas de turma Alexsandro Xavier, Thiago Vieira e Logy. Sem ajuda de voces eu nao teria concluido. Meu sincero agradecimento a todos que me ajudaram a chegar onde cheguei ate hoje. Gratidao.
