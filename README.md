@@ -74,7 +74,7 @@ Na rota post '/register', fazemos a criacao de um usuario informando um json com
 
 #### Login na aplicacao (pre-requisito para as demais rotas) POST /login:
 
-Na rota POST '/register', fazemos a criação de um usuário informando um JSON com as chaves name e password no corpo da requisição contendo os valores de nome de usuário e senha. Todas as rotas e o token gerado no login contam com middlewares de erro para o caso de chamadas indevidas. Se a requisição for bem-sucedida, a API retornará o token que e pre requisito para as demais requisicoes. Portanto assim que efetuar a requisicao de login, copie a chave token para que possa usar nas proximas requisicoes. Como o nome sugere, este endpoint efetua o login fornecendo name e password no momento da requisicao. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuario a criar e a senha. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+Na rota POST '/login', fazemos a criação de um usuário, informando um JSON com as chaves "name" e "password" no corpo da requisição, contendo os valores de nome de usuário e senha. Todas as rotas, assim como o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas. Se a requisição for bem-sucedida, a API retornará o token, que é pré-requisito para as demais requisições. Portanto, assim que efetuar a requisição de login, copie a chave "token" para que possa usá-la nas próximas requisições. Como o nome sugere, este endpoint efetua o login fornecendo "name" e "password" no momento da requisição. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuário a criar e a senha. Se a requisição for bem sucedida a api retornará um ```status code 200```. Caso nao seja bem sucedida, retornará outro codigo com a mensagem do erro corespondente.
 
 ```localhost:3001/login"``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/login```
 
@@ -83,7 +83,7 @@ Na rota POST '/register', fazemos a criação de um usuário informando um JSON 
 
 #### Listar todas as tarefas GET /tasks/iduser:
 
-A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado com senha e token por meio do id de usuario logado. No momento da chamada, deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado com senha e token por meio do id de usuario logado. No momento da chamada, deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/12``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/12```
 
@@ -93,7 +93,7 @@ A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usua
 
 #### Lista uma tarefa pelo id da tarefa GET /tasks/onetask/id_da_tarefa:
 
-A rota GET '/onetask/:id', realiza a consulta de uma tarefa existente para o usuario autenticado por senha e token por meio do id da tarefa. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota GET '/onetask/:id' realiza a consulta de uma tarefa existente para o usuário autenticado pelo id da tarefa, utilizando senha e token. No header da requisição, deve ser informado o campo "Authorization" com o valor do token gerado após o login. Se a requisição for bem sucedida a api retornará um ```status code 200```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/onetask/10``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/onetask/10```
 
@@ -101,7 +101,7 @@ A rota GET '/onetask/:id', realiza a consulta de uma tarefa existente para o usu
 
 
 #### Salvando uma nova tarefa POST /tasks :
-A rota POST '/tasks',e rota para a criacao de uma tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task. Se a requisicao for bem sucedida a api retornara um ```status code 201```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota POST '/tasks',é a rota para a criacao de uma tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task. Se a requisicao for bem sucedida a api retornara um ```status code 201```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/```
 
