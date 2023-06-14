@@ -51,7 +51,7 @@ npm run seed
    
 ## ![computer](https://github.com/thiagolordello/todolist_backend/assets/20212304/7818fd10-09fd-4a9c-936f-662b1b393763)  Vamos a pratica! Utilização das rotas:
 
-#### Atencao!
+#### Atenção!
 
 Para prosseguir com a utilização das rotas, você poderá optar por utilizar a aplicação em nuvem (ambiente já disponível e não precisa de instalação) ou em ambiente local (precisará instalar as dependências na raiz do projeto "/todolist_backend"). Nos exemplos de chamadas abaixo, elas estão com o apontamento local 'localhost'. Caso sua escolha seja fazer direto na API em nuvem, basta substituir o início de cada chamada, trocando o trecho  ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
 
@@ -101,7 +101,7 @@ A rota GET '/onetask/:id' realiza a consulta de uma tarefa existente para o usu�
 
 
 #### Salvando uma nova tarefa POST /tasks :
-A rota POST '/tasks',é a rota para a criação de uma tarefa. Deve ser fornecido no body da requisição um json com as chaves idUser,description e status. Nelas estarão respectivamnete informados o id do usuario logado, a descricão da task a ser criada e o status da task. Se a requisição for bem sucedida a api retornará um ```status code 201```. Caso nao seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
+A rota POST '/tasks',é a rota para a criação de uma tarefa. Deve ser fornecido no body da requisição um json com as chaves idUser,description e status. Nelas estarão respectivamnete informados o id do usuario logado, a descricão da task a ser criada e o status da task. Se a requisição for bem sucedida a api retornará um ```status code 201```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/```
 
@@ -169,7 +169,7 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
   Faz uma chamada post para a rota /login enviando somente name e campo password ausente para efetuar o login.  
   
 
-```Quando o usuario informado nao for encontrado, retorna uma mensagem e o status 404```
+```Quando o usuario informado não for encontrado, retorna uma mensagem e o status 404```
   
   Faz uma chamada post para a rota /login enviando name e password com uma senha errada para efetuar o login.
   
@@ -183,7 +183,7 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
   
   ### No arquivo ```tasks.getAll.test.js"```, estão os testes referentes a rota GET /tasks/id_user. Os casos de teste são os seguintes:
 
-```Retorna o status 200,quando a requisição get for bem sucedida e valida o retorno das tasks do usuario!```
+```Retorna o status 200,quando a requisição get for bem sucedida e valida o retorno das tasks do usuário!```
 
   Faz a requisição get para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado. 
 
@@ -199,7 +199,7 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
   ### No arquivo ```tasks.getOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
 
-```Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno da task requisitada!```
+```Retorna o status 200,quando a requisicão get for bem sucedida e válida o retorno da task requisitada!```
 
   Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login. 
   
@@ -211,13 +211,13 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
-  Faz a requisicao get para a rota /tasks/onetask/idTask passando o id da tarefa no header com o token ausente. 
+  Faz a requisição get para a rota /tasks/onetask/idTask passando o id da tarefa no header com o token ausente. 
   
   
   
   
 
-  ### No arquivo ```userRegister.test.js"```, estão os testes referentes a rota POST /register que registra um novo usuário. Os casos de teste sao os seguintes:
+  ### No arquivo ```userRegister.test.js"```, estão os testes referentes a rota POST /register que registra um novo usuário. Os casos de teste so os seguintes:
 
 ```Retorna o status 201,quando a criação for bem sucedida!```
 
