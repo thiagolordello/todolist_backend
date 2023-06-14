@@ -57,7 +57,7 @@ Para prosseguir com a utilização das rotas, você poderá optar por utilizar a
 
 Exemplo : 
 
-Para a chamada que faz o get all das tarefas ao inves de usar ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
+Para a chamada que faz o get all das tarefas ao invés de usar ```localhost:3001/tasks/5``` use ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/5```
 
 
 
@@ -65,16 +65,16 @@ Para a chamada que faz o get all das tarefas ao inves de usar ```localhost:3001/
 
 #### Registro de novo usuário POST /register:
 
-Na rota post '/register', fazemos a criacao de um usuario informando um json com as chaves name e password no corpo da requisicao contendo os valores de nome de usuario e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas. Se a requisicao for bem sucedida a api retornara um ```status code 201```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+Na rota post '/register', fazemos a criação de um usuário informando um json com as chaves name e password no corpo da requisição contendo os valores de nome de usuário e senha. Todas as rotas e o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas. Se a requisição for bem sucedida a api retornará um ```status code 201```. Caso não seja bem sucedida, retornará outro codigo com a mensagem do erro corespondente.
 
 ```localhost:3001/register``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/register```
 
 ![Captura de tela de 2023-06-02 15-26-06](https://github.com/thiagolordello/todolist_backend/assets/20212304/fb2e45a6-67f6-4498-94f5-43fd67f40651)
 
 
-#### Login na aplicacao (pre-requisito para as demais rotas) POST /login:
+#### Login na aplicação (pré-requisito para as demais rotas) POST /login:
 
-Na rota POST '/login', fazemos a criação de um usuário, informando um JSON com as chaves "name" e "password" no corpo da requisição, contendo os valores de nome de usuário e senha. Todas as rotas, assim como o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas. Se a requisição for bem-sucedida, a API retornará o token, que é pré-requisito para as demais requisições. Portanto, assim que efetuar a requisição de login, copie a chave "token" para que possa usá-la nas próximas requisições. Como o nome sugere, este endpoint efetua o login fornecendo "name" e "password" no momento da requisição. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuário a criar e a senha. Se a requisição for bem sucedida a api retornará um ```status code 200```. Caso nao seja bem sucedida, retornará outro codigo com a mensagem do erro corespondente.
+Na rota POST '/login', fazemos a criação de um usuário, informando um JSON com as chaves "name" e "password" no corpo da requisição, contendo os valores de nome de usuário e senha. Todas as rotas, assim como o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas. Se a requisição for bem-sucedida, a API retornará o token, que é pré-requisito para as demais requisições. Portanto, assim que efetuar a requisição de login, copie a chave "token" para que possa usá-la nas próximas requisições. Como o nome sugere, este endpoint efetua o login fornecendo "name" e "password" no momento da requisição. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuário a criar e a senha. Se a requisição for bem sucedida a api retornará um ```status code 200```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/login"``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/login```
 
@@ -83,7 +83,7 @@ Na rota POST '/login', fazemos a criação de um usuário, informando um JSON co
 
 #### Listar todas as tarefas GET /tasks/iduser:
 
-A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuario autenticado com senha e token por meio do id de usuario logado. No momento da chamada, deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 200```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
+A rota get '/:id', realiza a consulta de todas as tarefas existentes para o usuário autenticado com senha e token por meio do id de usuário logado. No momento da chamada, deve ser informado no header da reuisicão o campo Authorization com o valor do token gerado apos o login. Se a requisição for bem sucedida a api retornará um ```status code 200```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/12``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/12```
 
@@ -101,7 +101,7 @@ A rota GET '/onetask/:id' realiza a consulta de uma tarefa existente para o usu�
 
 
 #### Salvando uma nova tarefa POST /tasks :
-A rota POST '/tasks',é a rota para a criacao de uma tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser criada e o status da task. Se a requisicao for bem sucedida a api retornara um ```status code 201```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota POST '/tasks',é a rota para a criação de uma tarefa. Deve ser fornecido no body da requisição um json com as chaves idUser,description e status. Nelas estarão respectivamnete informados o id do usuario logado, a descricão da task a ser criada e o status da task. Se a requisição for bem sucedida a api retornará um ```status code 201```. Caso nao seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/```
 
@@ -109,7 +109,7 @@ A rota POST '/tasks',é a rota para a criacao de uma tarefa. Deve ser fornecido 
 
 
 #### Editando uma tarefa pelo id da tarefa PUT /id_da_tarefa :
-A rota PUT '/:id' faz a alteracao de uma tarefa fornecendo o id da tarefa. Deve ser fornecido no body da requisicao um json com as chaves idUser,description e status. Nelas estarao respectivamnete informados o id do usuario logado, a descricao da task a ser editada e o status da task. Deve ser informado no header da requisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 204```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota PUT '/:id' faz a alteração de uma tarefa fornecendo o id da tarefa. Deve ser fornecido no body da requisição um json com as chaves idUser,description e status. Nelas estarão respectivamnete informados o id do usuario logado, a descrição da task a ser editada e o status da task. Deve ser informado no header da requisição o campo Authorization com o valor do token gerado apos o login. Se a requisição for bem sucedida a api retornará um ```status code 204```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/10``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/10```
 
@@ -117,54 +117,54 @@ A rota PUT '/:id' faz a alteracao de uma tarefa fornecendo o id da tarefa. Deve 
 
 
 #### Removendo uma tarefa pelo id da tarefa DELETE /id_da_tarefa :
-A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado. Deve ser informado no header da reuisicao o campo Authorization com o valor do token gerado apos o login. Se a requisicao for bem sucedida a api retornara um ```status code 204```. Caso nao seja bem sucedida, retornara outro codigo com a mensagem do erro corespondente.
+A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado. Deve ser informado no header da reuisição o campo Authorization com o valor do token gerado apos o login. Se a requisição for bem sucedida a api retornará um ```status code 204```. Caso não seja bem sucedida, retornará outro codigo com a mensagem do erro corespondente.
 
 ```localhost:3001/tasks/9``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/9``` 
 
 
 ## ![banco2](https://github.com/thiagolordello/todolist_backend/assets/20212304/2c3a6985-5eb4-412e-8af7-4269888b4f84) Arquitetura do Banco de Dados 
 
-Para a estrutura desse projeto, foram idealizadas duas entidades relacionais onde estao dispostas as informacoes do sistema . Na entidade users armazemanos as informacoes de cadastro dos usuarios como name e password. Na entidade tasks_user, temos as informacoes diretamente ligadas as tarefas como a descricao, o status e a data de criacao (createdAt), alem do id_user que referencia a que usuario a tarefa pertence.   
+Para a estrutura desse projeto, foram idealizadas duas entidades relacionais onde estão dispostas as informaçoes do sistema . Na entidade users armazemanos as informações de cadastro dos usuários como name e password. Na entidade tasks_user, temos as informações diretamente ligadas as tarefas como a descrição, o status e a data de criação (createdAt), alem do id_user que referencia a que usuário a tarefa pertence.   
 Para a construcão da API utlizamos a tecnologia ORM Sequelize na orquestração do banco de dados MySql
 
 ![image](https://github.com/thiagolordello/todolist_backend/assets/20212304/aebf89eb-f2b6-47b3-9800-2268db43452c)
 
 ## ⚙️ Executando os testes
 
-Os testes foram desenvolvidos com a biblioteca chai e chai-http. Nesta biblioteca fazemos o acesso direto aos endpoints, simulando uma real requisicao a API. Todos os testes estao baseados nos dados inseridos na execucao do seed que quando executado, popula o banco com uma carga inicial de dados que sera usados nos testes. Portanto e fundamental executar a completa instalacao do projeto incluindo a execucao dos scripts detalhados no topico de instalacao. Caso nao seja executada a instalacao por completo incluindo os scripts, os testes falharao por nao haver os dados que sao usados para comparacao nos testes.
+Os testes foram desenvolvidos com a biblioteca chai e chai-http. Nesta biblioteca fazemos o acesso direto aos endpoints, simulando uma real requisição a API. Todos os testes estão baseados nos dados inseridos na execução do seed que quando executado, popula o banco com uma carga inicial de dados que será usados nos testes. Portanto é fundamental executar a completa instalação do projeto incluindo a execução dos scripts detalhados no topico de instalação. Caso não seja executada a instalação por completo incluindo os scripts, os testes falharão por nao haver os dados que sao usados para comparação nos testes.
 
-Para a execucao dos testes sera necessario estar com aplicacao iniciada e obviamente ter sido executada a instalacao do projeto no topico acima de instalacao. Caso nao esteja iniciada, execute o seguinte comando de script.
+Para a execucao dos testes será necessário estar com aplicacao iniciada e obviamente ter sido executada a instalação do projeto no tópico acima de instalação. Caso não esteja iniciada, execute o seguinte comando de script.
 ```
 npm run debug
 ```
-Com a aplicacao rodando execute o comando para a execucao dos testes.
+Com a aplicação rodando execute o comando para a execução dos testes.
 ```
 npm run test
 ```
 
 ## 🔩 Analise de cada teste
 
-Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do projeto. Estao dividos em quatro arquivos com nomenclatura final '.test.js'. Os arquivos sao: login.test.js, tasks.getAll.test.js, userRegister.test.js e tasks.getOneTask.test.js . 
+Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do projeto. Estão dividos em quatro arquivos com nomenclatura final '.test.js'. Os arquivos são: login.test.js, tasks.getAll.test.js, userRegister.test.js e tasks.getOneTask.test.js . 
 
-### No arquivo ```login.test.js"```, estao os testes referentes a rota POST /login. Os casos de teste sao os seguintes:
+### No arquivo ```login.test.js"```, estão os testes referentes a rota POST /login. Os casos de teste são os seguintes:
 
 
 
 ```Retorna o status 200,quando o login for bem sucedido!``` :
 
-   Faz uma chamada post para a rota /login enviando name e password para efetuar o login. Se o valor informado de name e password estiverem registrados no banco a API retorna um status 200 com o body contendo os campos: name, token e id do usuario que sera usado na requisicao get all das tasks.
+   Faz uma chamada post para a rota /login enviando name e password para efetuar o login. Se o valor informado de name e password estiverem registrados no banco a API retorna um status 200 com o body contendo os campos: name, token e id do usuario que será usado na requisição get all das tasks.
 
 ```Retorna o status 404,quando o login nao for bem sucedido!```
 
-  Faz uma chamada post para a rota /login enviando name e password que nao existem no banco para efetuar o login. 
+  Faz uma chamada post para a rota /login enviando name e password que não existem no banco para efetuar o login. 
   
 
-```Quando o nome nao for informado, retorna uma mensagem e o status 404```
+```Quando o nome não for informado, retorna uma mensagem e o status 404```
   
   Faz uma chamada post para a rota /login enviando name vazio e password "" para efetuar o login.
   
 
-```Quando a senha nao for informada, retorna uma mensagem e o status 404```
+```Quando a senha não for informada, retorna uma mensagem e o status 404```
 
   Faz uma chamada post para a rota /login enviando somente name e campo password ausente para efetuar o login.  
   
@@ -174,39 +174,39 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
   Faz uma chamada post para a rota /login enviando name e password com uma senha errada para efetuar o login.
   
 
-```Quando o usuario e senha nao for informado, retorna uma mensagem e o status 400```
+```Quando o usuario e senha não for informado, retorna uma mensagem e o status 400```
   
   Faz uma chamada post para a rota /login enviando name e password vazios "" para efetuar o login.
   
   
 
   
-  ### No arquivo ```tasks.getAll.test.js"```, estao os testes referentes a rota GET /tasks/id_user. Os casos de teste sao os seguintes:
+  ### No arquivo ```tasks.getAll.test.js"```, estão os testes referentes a rota GET /tasks/id_user. Os casos de teste são os seguintes:
 
-```Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno das tasks do usuario!```
+```Retorna o status 200,quando a requisição get for bem sucedida e valida o retorno das tasks do usuario!```
 
-  Faz a requisicao get para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado. 
+  Faz a requisição get para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado. 
 
-```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
+```Retorna o status 401 e mensagem, quando o token enviado no header não é valido!```
   
-  Faz a requisicao get para a rota /tasks/id_user enviando um token invalido no header para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
+  Faz a requisição get para a rota /tasks/id_user enviando um token inválido no header para a rota /tasks/id_user para trazer todas as tarefas do usuário logado.
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
-  Faz a requisicao get para a rota /tasks/id_user nao enviando token para a rota /tasks/id_user para trazer todas as tarefas do usuario usuario logado.
+  Faz a requisição get para a rota /tasks/id_user não enviando token para a rota /tasks/id_user para trazer todas as tarefas do usuário usuario logado.
   
   
 
-  ### No arquivo ```tasks.getOneTask.test.js"```, estao os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste sao os seguintes:
+  ### No arquivo ```tasks.getOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
 
 ```Retorna o status 200,quando a requisicao get for bem sucedida e valida o retorno da task requisitada!```
 
-  Faz a requisicao get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login. 
+  Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login. 
   
 
-```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
+```Retorna o status 401 e mensagem, quando o token enviado no header não é valido!```
 
-  Faz a requisicao get para a rota /tasks/onetask/idTask passando o id da tarefa no header e um token desconhecido.
+  Faz a requisição get para a rota /tasks/onetask/idTask passando o id da tarefa no header e um token desconhecido.
     
 
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
@@ -217,51 +217,51 @@ Todos os arquivos de teste estao no diretorio '/tests' localizado na raiz do pro
   
   
 
-  ### No arquivo ```userRegister.test.js"```, estao os testes referentes a rota POST /register que registra um novo usuario. Os casos de teste sao os seguintes:
+  ### No arquivo ```userRegister.test.js"```, estão os testes referentes a rota POST /register que registra um novo usuário. Os casos de teste sao os seguintes:
 
-```Retorna o status 201,quando a criacao for bem sucedida!```
+```Retorna o status 201,quando a criação for bem sucedida!```
 
-   Faz a requisicao post com name e password para a rota /register.
+   Faz a requisição post com name e password para a rota /register.
 
 ```Quando somente a senha for informada, retorna uma mensagem de erro e o status 400```
 
-   Faz a requisicao post com name vazio  e password para a rota /register.
+   Faz a requisição post com name vazio  e password para a rota /register.
 
 ```Quando somente o nome for informado, retorna uma mensagem de erro e o status 400```
 
-   Faz a requisicao post com password vazio  e nome para a rota /register.
+   Faz a requisição post com password vazio  e nome para a rota /register.
 
-```Quando o usuario e a senha foram informados sem dados dentro (""), retorna uma mensagem e o status 400```
+```Quando o usuário e a senha foram informados sem dados dentro (""), retorna uma mensagem e o status 400```
 
-   Faz a requisicao post com name e password vazios para a rota /register.
+   Faz a requisição post com name e password vazios para a rota /register.
 
-```Quando o usuario e a senha nao foram informados no json, retorna uma mensagem e o status 500```
+```Quando o usuário e a senha não foram informados no json, retorna uma mensagem e o status 500```
    
-   Faz a requisicao post sem as chaves name e password para a rota /register.
+   Faz a requisição post sem as chaves name e password para a rota /register.
    
    
 
- Todos os testes foram desenvolvidos pensando na mais real situacao possivel das chamadas a API. Ao optar por nao usar STUB na aplicacao, estamos fazendo chamadas diretas a API atraves da biblioteca CHAI-HTTP. Para estes casos de teste, foram utilizados os dados inseridos inicialmente na aplicacao por meio dos seeders que populam o banco. Para que nao comprometer a integridade do ambiente de testes, nao faca alteracoes no usuario joao pois nele estao baseados os casos de teste. Caso haja qualquer alteracao dos dados inseridos nesse usuario, ocorrerao erros de execucao.
+ Todos os testes foram desenvolvidos pensando na mais real situação possível das chamadas a API. Ao optar por não usar STUB na aplicação, estamos fazendo chamadas diretas a API através da biblioteca CHAI-HTTP. Para estes casos de teste, foram utilizados os dados inseridos inicialmente na aplicação por meio dos seeders que populam o banco. Para não comprometer a integridade do ambiente de testes, não faca alteracões no usuário joao pois nele estao baseados os casos de teste. Caso haja qualquer alteração dos dados inseridos nesse usuário, ocorrerão erros de execução.
 
 
 ## 🛠️ Construído com
 
-Aqui estao as tecnologias que foram usadas para contruir o sistema:
+Aqui estão as tecnologias que foram usadas para construir o sistema:
 
 * [Nodejs] - O framework web usado.
-* [Sequelize] - ORM para geracao de banco de dados relacional Mysql
-* [Chai] - Biblioteca utilizada para a geracao dos testes.
-* [Chai-Http] - Biblioteca usada para a chamada em tempo real das requisicoes web a API.
-* [body-parser] - Middleware usado em node para analisar as requisicoes http.
-* [cors] - Utilizado para obter maior seguranca no trafego http.
-* [dotenv] - Utilizado para ocultar as variaveis ambiente presentes no arquivo .env .
-* [express] - Framework usado para auxiliar o trafego das rotas.
-* [frisby] - Biblioteca js usada para escrever os testes da aplicacao.
-* [jsonwebtoken] - Token utilizado na segunraca de login e nas demais rotas da aplicacao.
-* [md5] - Criptografia aplicada na encriptacao de dados para salvar no banco.
-* [moment] - Biblioteca usada para trabalhar com datas e horarios nos testes.
-* [mysql2] - Biblioteca que permite a comumicacao com o banco mysql da aplicacao.
-* [nodemon] - Utilizado para o ambiente de desenvolvimento evitando o restart da aplicacao a cada vez que alterado o codigo.
+* [Sequelize] - ORM para geração de banco de dados relacional Mysql
+* [Chai] - Biblioteca utilizada para a geração dos testes.
+* [Chai-Http] - Biblioteca usada para a chamada em tempo real das requisições web a API.
+* [body-parser] - Middleware usado em node para analisar as requisições http.
+* [cors] - Utilizado para obter maior segurança no tráfego http.
+* [dotenv] - Utilizado para ocultar as variáveis de ambiente presentes no arquivo .env .
+* [express] - Framework usado para auxiliar o tráfego das rotas.
+* [frisby] - Biblioteca js usada para escrever os testes da aplicação.
+* [jsonwebtoken] - Token utilizado na segunraca de login e nas demais rotas da aplicação.
+* [md5] - Criptografia aplicada na encriptação de dados para salvar no banco.
+* [moment] - Biblioteca usada para trabalhar com datas e horários nos testes.
+* [mysql2] - Biblioteca que permite a comumicação com o banco mysql da aplicação.
+* [nodemon] - Utilizado para o ambiente de desenvolvimento evitando o restart da aplicação a cada vez que alterado o código.
 * [sequelize-cli] - Interface de linha de comando para o uso do sequelize.  
 
 
@@ -275,10 +275,10 @@ Aqui estao as tecnologias que foram usadas para contruir o sistema:
 
 ## 📄 Licença
 
-Este projeto tem fins apenas para estudo e demonstracao como portifolio pessoal. Esta vetado o uso para fins comerciais.
+Este projeto tem fins apenas para estudo e demonstracão como portifólio pessoal. Está vetado o uso para fins comerciais.
 
 ## 🎁 Expressões de gratidão
 
-* Aqui eu gostaria de agradecer a todos que me ajudam e me ajudaram nesta construcao inportante pra minha carreira;
-* Gostaria de agradecer primeiro a Deus por toda ajuda que tive e segundo lugar a minha familia que tanto me apoia nessa jornada do desenvolvimento. 🫂;
-* Agradecimento tambem aos colegas de turma Alexsandro Xavier, Thiago Vieira e Logy. Sem ajuda de voces eu nao teria concluido. Meu sincero agradecimento a todos que me ajudaram a chegar onde cheguei ate hoje. Gratidao.
+* Aqui eu gostaria de agradecer a todos que me ajudam e me ajudaram nesta construção tão inportante pra minha carreira;
+* Gostaria de agradecer primeiro a Deus por toda ajuda que tive, e segundo lugar a minha familia que tanto me apoia nessa jornada do desenvolvimento. 🫂;
+* Agradecimento tambem aos colegas de turma Alexsandro Xavier, Thiago Vieira e Logy. Sem ajuda de vocês eu não teria concluido esse projeto. Portanto registro aqui meus sinceros agradecimentos a todos que me ajudaram a chegar onde cheguei. Gratidao.
