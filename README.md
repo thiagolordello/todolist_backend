@@ -240,11 +240,21 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
    Faz a requisição post sem as chaves name e password para a rota /register.
 
 
-    ### No arquivo ```taskPutOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
+  ### No arquivo ```taskPutOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
 
-```Retorna o status 200,quando a requisicão get for bem sucedida e válida o retorno da task requisitada!```
+```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
 
   Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login. 
+
+  
+```Retorna o status 401 e mensagem, quando o token for ausente no header!```
+
+  Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login.
+
+  
+```Retorna o status 404 e mensagem, quando o id da tarefa informada nao existir```
+
+  Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login.
 
 
    ### No arquivo ```tasksDeleteOneTask.test.js"```, estão os testes referentes a rota DELETE /tasks/id_da_tarefa. Os casos de teste são os seguintes:
