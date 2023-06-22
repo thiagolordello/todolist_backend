@@ -11,7 +11,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 ### 📋 Pré-requisitos
 
 Banco de dados MySql instalado em docker ou local
-Nodejs versão 16.0.0
+Nodejs versão 14.21.3
 Node Package Manager 
 ``
 ### 🔧 Instalação
