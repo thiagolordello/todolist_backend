@@ -158,7 +158,12 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
 ```Retorna o status 404,quando o login nao for bem sucedido!```
 
-  Faz uma chamada post para a rota /login enviando name e password que não existem no banco para efetuar o login. 
+  Faz uma chamada post para a rota /login enviando name e password que não existem no banco para efetuar o login.
+  
+
+```Quando o usuario informado nao for encontrado, retorna uma mensagem e o status 404```
+
+  Faz uma chamada post para a rota /login enviando name que não existe no banco e senha para efetuar o login. 
   
 
 ```Quando o nome não for informado, retorna uma mensagem e o status 404```
