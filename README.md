@@ -242,19 +242,24 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
   ### No arquivo ```taskPutOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
 
-```Retorna o status 401 e mensagem, quando o token enviado no header nao e valido!```
 
-  Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login. 
+```Retorna o status 204,quando a requisicao put for bem sucedida```
+
+  Faz a requisição put para a rota /tasks/idTask passando o id da tarefa no header e o token gerado no login. 
+
+
+```Retorna o status 401 e mensagem, quando o token enviado no header nao é valido!```
+
+  Faz a requisição put para a rota /tasks/idTask passando no header o id da tarefa no header e o token inválido. 
 
   
 ```Retorna o status 401 e mensagem, quando o token for ausente no header!```
 
-  Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login.
-
+  Faz a requisição put para a rota /tasks/idTask passando no header o id da tarefa sem o token.
   
-```Retorna o status 404 e mensagem, quando o id da tarefa informada nao existir```
+```Retorna o status 404 e mensagem, quando o id da tarefa informada não existir```
 
-  Faz a requisicão get para a rota /tasks/onetask/idTask passando o id da tarefa no header e o token gerado no login.
+  Faz a requisição get para a rota /tasks/onetask/idTask passando um id inexistente da tarefa no header e o token gerado no login.
 
 
    ### No arquivo ```tasksDeleteOneTask.test.js"```, estão os testes referentes a rota DELETE /tasks/id_da_tarefa. Os casos de teste são os seguintes:
