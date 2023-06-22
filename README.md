@@ -243,7 +243,7 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
   ### No arquivo ```taskPutOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
 
 
-```Retorna o status 204,quando a requisicao put for bem sucedida```
+```Retorna o status 204,quando a requisição put for bem sucedida```
 
   Faz a requisição put para a rota /tasks/idTask passando o id da tarefa no header e o token gerado no login. 
 
@@ -257,14 +257,14 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
   Faz a requisição put para a rota /tasks/idTask passando no header o id da tarefa sem o token.
   
-```Retorna o status 404 e mensagem, quando o id da tarefa informada não existir```
+```Retorna o status 404 e mensagem, quando o id da tarefa informada não existir.```
 
   Faz a requisição get para a rota /tasks/onetask/idTask passando um id inexistente da tarefa no header e o token gerado no login.
 
 
-   ### No arquivo ```tasksDeleteOneTask.test.js"```, estão os testes referentes a rota DELETE /tasks/id_da_tarefa. Os casos de teste são os seguintes:
+  ### No arquivo ```tasksDeleteOneTask.test.js"```, estão os testes referentes a rota DELETE /tasks/id_da_tarefa. Os casos de teste são os seguintes:
 
-```Retorna o status 200 e mensagem "Tarefa removida com sucesso!", quando a delecao for bem sucedida```
+```Retorna o status 200 e a mensagem "Tarefa removida com sucesso!", quando a deleção for bem sucedida```
 
   Faz a requisição delete para a rota /tasks/idTask passando o id da tarefa no header e o token gerado no login. Aqui é verificado se o status code é o 200 e se a mensagem de erro corresponde a enviada peal API. 
   
@@ -286,31 +286,31 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
    ### No arquivo ```tasksPostOneTask.test.js"```, estão os testes referentes a criação de uma tarefa na rota POST tasks/ (Create Task). Os casos de teste são os seguintes:
 
-```Retorna o status 201,quando a criacao for bem sucedida!```
+```Retorna o status 201,quando a criação for bem sucedida!```
 
   Faz a requisição post para a rota /tasks/ enviando no body da requisição as chaves idUser,description e status. Aqui comparamos se o status code recebido é igual ao 201. 
   
 
   ```Retorna o status 401,quando o post não for bem sucedido (sem token)!```
 
-  Faz a requisição post para a rota /tasks/ enviando no body da requisição as chaves idUser,description e status. Porem no header não é passado o token. Aqui é verificado se o status code é o 401 e se a mensagem de erro corresponde a enviada peal API.
+  Faz a requisição post para a rota /tasks/ enviando no body da requisição as chaves idUser,description e status. Porem no header não é passado o token. Aqui é verificado se o status code é o 401 e se a mensagem de erro corresponde a enviada pela API.
   
 
   ```Quando o idUser não for informado, retorna uma mensagem de erro e o status 500```
 
-  Faz a requisição post para a rota /tasks/ enviando no body da requisição apenas as chaves description e status. Aqui é verificado se o status code é o 500 e se a mensagem de erro corresponde a enviada peal API.
+  Faz a requisição post para a rota /tasks/ enviando no body da requisição apenas as chaves description e status. Aqui é verificado se o status code é o 500 e se a mensagem de erro corresponde a enviada pela API.
 
   
 
   ```Quando a descrição não for informada, retorna uma mensagem de erro e o status 500.```
 
-  Faz a requisição post para a rota /tasks/ enviando no body da requisição apenas as chaves idUser e status. Aqui é verificado se o status code é o 500 e se a mensagem de erro corresponde a enviada peal API.
+  Faz a requisição post para a rota /tasks/ enviando no body da requisição apenas as chaves idUser e status. Aqui é verificado se o status code é o 500 e se a mensagem de erro corresponde a enviada pela API.
 
   
 
   ```Quando o status nao for informado, retorna uma mensagem e o status 500.```
 
-  Faz a requisição post para a rota /tasks/ enviando no body da requisição apenas as chaves idUser e description. Aqui é verificado se o status code é o 500 e se a mensagem de erro corresponde a enviada peal API.
+  Faz a requisição post para a rota /tasks/ enviando no body da requisição apenas as chaves idUser e description. Aqui é verificado se o status code é o 500 e se a mensagem de erro corresponde a enviada pela API.
    
    
 
