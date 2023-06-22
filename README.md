@@ -119,7 +119,9 @@ A rota PUT '/:id' faz a alteração de uma tarefa fornecendo o id da tarefa. Dev
 #### Removendo uma tarefa pelo id da tarefa DELETE /id_da_tarefa :
 A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado. Deve ser informado no header da reuisição o campo Authorization com o valor do token gerado apos o login. Se a requisição for bem sucedida a api retornará um ```status code 204```. Caso não seja bem sucedida, retornará outro codigo com a mensagem do erro corespondente.
 
-```localhost:3001/tasks/9``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/9``` 
+```localhost:3001/tasks/9``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/9```
+
+![image](https://github.com/thiagolordello/todolist_backend/assets/20212304/302d78d5-5ca4-489a-be09-49fecc62a941)
 
 
 ## ![banco2](https://github.com/thiagolordello/todolist_backend/assets/20212304/2c3a6985-5eb4-412e-8af7-4269888b4f84) Arquitetura do Banco de Dados 
