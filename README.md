@@ -133,9 +133,9 @@ Para a construcão da API utlizamos a tecnologia ORM Sequelize na orquestração
 
 ## ⚙️ Executando os testes
 
-Os testes foram desenvolvidos com a biblioteca chai e chai-http. Nesta biblioteca fazemos o acesso direto aos endpoints, simulando uma real requisição a API. Todos os testes estão baseados nos dados inseridos na execução do seed que quando executado, popula o banco com uma carga inicial de dados que será usados nos testes. Portanto é fundamental executar a completa instalação do projeto incluindo a execução dos scripts detalhados no topico de instalação. Caso não seja executada a instalação por completo incluindo os scripts, os testes falharão por nao haver os dados que sao usados para comparação nos testes.
+Os testes foram desenvolvidos com as bibliotecas chai, chai-http e sinon. Em alguns casos de testes fazemos o acesso direto aos endpoints, simulando uma real requisição a API. Em outra parte dos testes utilizamos mocks com a biblioteca Sinon, o que faz com que não dependamos da disponibilidade da API. Todos os testes estão baseados nos dados inseridos na execução do seed que quando executado, popula o banco com uma carga inicial de dados que será usados nos testes. Portanto é fundamental executar a completa instalação do projeto incluindo a execução dos scripts detalhados no topico de instalação. Caso não seja executada a instalação por completo incluindo os scripts, os testes falharão por nao haver os dados que são usados para comparação nos testes.
 
-Para a execucao dos testes será necessário estar com aplicacao iniciada e obviamente ter sido executada a instalação do projeto no tópico acima de instalação. Caso não esteja iniciada, execute o seguinte comando de script.
+Para a execução dos testes será necessário estar com aplicacao iniciada e obviamente ter sido executada a instalação do projeto no tópico acima de instalação. Caso não esteja iniciada, execute o seguinte comando de script.
 ```
 npm run debug
 ```
@@ -144,7 +144,7 @@ Com a aplicação rodando execute o comando para a execução dos testes.
 npm run test
 ```
 
-## 🔩 Analise de cada teste
+## 🔩 Análise de cada teste
 
 Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do projeto. Estão dividos em sete arquivos com nomenclatura final '.test.js'. Os arquivos são: login.test.js, taskPutOneTask.test.js, tasks.getAll.test.js, tasks.getOneTask.test.js, tasksDeleteOneTask.test.js, tasksPostOneTask.test.js, e userRegister.test.js . 
 
