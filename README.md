@@ -242,10 +242,6 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
    Faz a requisição post com name e password vazios para a rota /register.
 
-```Quando o usuário e a senha não foram informados no json, retorna uma mensagem e o status 500```
-   
-   Faz a requisição post sem as chaves name e password para a rota /register.
-
 
   ### No arquivo ```taskPutOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
 
